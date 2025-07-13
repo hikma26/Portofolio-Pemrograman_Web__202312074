@@ -1,0 +1,260 @@
+!DOCTYPE html
+html lang=id
+head
+  meta charset=UTF-8 
+  meta name=viewport content=width=device-width, initial-scale=1 
+  titleToko Elektronik Cepattitle
+  link href=httpscdn.jsdelivr.netnpmbootstrap@5.3.0distcssbootstrap.min.css rel=stylesheet 
+  style
+    body {
+      padding 20px;
+      background #f8f9fa;
+    }
+    #waktuTransaksi {
+      font-weight 600;
+      font-size 1.1rem;
+      color #495057;
+    }
+    .product-image {
+      width 100%;
+      height 300px;
+      object-fit contain;
+      border-radius 8px;
+      border 1px solid #ddd;
+      background white;
+    }
+    .product-name {
+      font-size 1.5rem;
+      font-weight 700;
+      margin-top 15px;
+    }
+    .product-price {
+      font-size 1.3rem;
+      color #0d6efd;
+      margin-bottom 20px;
+    }
+    .product-list-item {
+      cursor pointer;
+      padding 10px;
+      border-radius 6px;
+      transition background-color 0.3s;
+    }
+    .product-list-itemhover,
+    .product-list-item.active {
+      background-color #e7f1ff;
+      font-weight 600;
+      color #0d6efd;
+    }
+    #strukPesanan {
+      white-space pre-line;
+      background #fff;
+      padding 15px;
+      border-radius 8px;
+      border 1px solid #ced4da;
+      font-family monospace;
+      margin-top 20px;
+    }
+  style
+head
+body
+
+  header class=mb-4
+    h1 class=mb-1Toko Elektronik Cepath1
+    div id=waktuTransaksiLoading waktu...div
+  header
+
+  div class=container
+    div class=row g-4
+      div class=col-lg-8 col-md-12
+        div class=card p-3 shadow-sm
+          img id=gambarProduk class=product-image mb-3 src= alt=Gambar Produk 
+          div class=d-flex justify-content-between mb-3
+            button class=btn btn-outline-primary onclick=ubahGambar(-1)Previousbutton
+            button class=btn btn-outline-primary onclick=ubahGambar(1)Nextbutton
+          div
+          div class=product-name id=namaProdukdiv
+          div class=product-price id=hargaProdukdiv
+        div
+      div
+
+      div class=col-lg-4 col-md-12
+        div class=card p-3 shadow-sm style=max-height 400px; overflow-y auto;
+          h5Daftar Produkh5
+          div id=daftarProduk class=list-group mt-3div
+        div
+      div
+    div
+
+    div class=row mt-5
+      div class=col-lg-6 col-md-12
+        div class=card p-4 shadow-sm
+          h4Pemesananh4
+          form id=formPemesanan onsubmit=return prosesPemesanan()
+            div class=mb-3
+              label for=namaPemesan class=form-labelNama Pemesanlabel
+              input type=text id=namaPemesan class=form-control 
+              div id=errorNama class=text-danger smalldiv
+            div
+            div class=mb-3
+              label for=jumlahPesan class=form-labelJumlah Pesanlabel
+              input type=number id=jumlahPesan class=form-control min=1 
+              div id=errorJumlah class=text-danger smalldiv
+            div
+            div class=mb-3
+              label for=kodePromo class=form-labelKode Promolabel
+              input type=text id=kodePromo class=form-control placeholder=DISKON10 
+            div
+            button type=submit class=btn btn-successPesan Sekarangbutton
+          form
+        div
+      div
+
+      div class=col-lg-6 col-md-12
+        div class=card p-4 shadow-sm
+          h4Struk Pesananh4
+          pre id=strukPesananBelum ada pesananpre
+        div
+      div
+    div
+  div
+
+script
+  const produk = [
+    {
+      nama iPhone,
+      harga 20000000,
+      gambar [
+        iphone14.jpg,
+        iphone15.jpg,
+        iphone 16.jpg
+      ]
+    },
+    {
+      nama Smartphone Android,
+      harga 4500000,
+      gambar [
+        readmiA1.jpg,
+        Nokia-C3-3.jpg,
+        maxresdefault.jpg
+      ]
+    },
+    {
+      nama Laptop,
+      harga 15000000,
+      gambar [
+        asusvivobook.jpg,
+        legion.jpg,
+        laptophp.jpg
+      ]
+    }
+  ];
+
+  let indexProdukAktif = 0;
+  let indexGambarAktif = 0;
+
+  const gambarProdukEl = document.getElementById(gambarProduk);
+  const namaProdukEl = document.getElementById(namaProduk);
+  const hargaProdukEl = document.getElementById(hargaProduk);
+  const daftarProdukEl = document.getElementById(daftarProduk);
+  const strukPesananEl = document.getElementById(strukPesanan);
+
+  function tampilkanProduk() {
+    const produkAktif = produk[indexProdukAktif];
+    gambarProdukEl.src = produkAktif.gambar[indexGambarAktif];
+    namaProdukEl.textContent = produkAktif.nama;
+    hargaProdukEl.textContent = `Rp ${produkAktif.harga.toLocaleString(id-ID)}`;
+    updateDaftarProdukHighlight();
+  }
+
+  function ubahGambar(arah) {
+    const produkAktif = produk[indexProdukAktif];
+    indexGambarAktif += arah;
+    if (indexGambarAktif = produkAktif.gambar.length) indexGambarAktif = 0;
+    if (indexGambarAktif  0) indexGambarAktif = produkAktif.gambar.length - 1;
+    tampilkanProduk();
+  }
+
+  function renderDaftarProduk() {
+    daftarProdukEl.innerHTML = ;
+    produk.forEach((item, idx) = {
+      const div = document.createElement(div);
+      div.className = product-list-item list-group-item;
+      div.textContent = item.nama;
+      div.onclick = () = {
+        indexProdukAktif = idx;
+        indexGambarAktif = 0;
+        tampilkanProduk();
+      };
+      daftarProdukEl.appendChild(div);
+    });
+  }
+
+  function updateDaftarProdukHighlight() {
+    const items = daftarProdukEl.children;
+    for (let i = 0; i  items.length; i++) {
+      items[i].classList.toggle(active, i === indexProdukAktif);
+    }
+  }
+
+  function updateWaktu() {
+    const sekarang = new Date();
+    const utc = sekarang.getTime() + (sekarang.getTimezoneOffset()  60000);
+    const waktuWITA = new Date(utc + (3600000  8));
+    const opsi = {
+      year 'numeric', month '2-digit', day '2-digit',
+      hour '2-digit', minute '2-digit', second '2-digit',
+      hour12 false,
+    };
+    const waktuString = waktuWITA.toLocaleString('id-ID', opsi);
+    document.getElementById(waktuTransaksi).textContent = `Waktu Transaksi (WITA) ${waktuString}`;
+  }
+  setInterval(updateWaktu, 1000);
+  updateWaktu();
+
+  function prosesPemesanan() {
+    document.getElementById(errorNama).textContent = ;
+    document.getElementById(errorJumlah).textContent = ;
+
+    const namaPemesan = document.getElementById(namaPemesan).value.trim();
+    const jumlahPesan = Number(document.getElementById(jumlahPesan).value);
+    const kodePromo = document.getElementById(kodePromo).value.trim().toUpperCase();
+
+    let valid = true;
+    if (namaPemesan === ) {
+      document.getElementById(errorNama).textContent = Nama pemesan tidak boleh kosong.;
+      valid = false;
+    }
+    if (isNaN(jumlahPesan)  jumlahPesan = 0) {
+      document.getElementById(errorJumlah).textContent = Jumlah pesan harus lebih dari 0.;
+      valid = false;
+    }
+    if (!valid) return false;
+
+    const produkAktif = produk[indexProdukAktif];
+    const subtotal = produkAktif.harga  jumlahPesan;
+    let potongan = 0;
+    if (kodePromo === DISKON10) {
+      potongan = subtotal  0.10;
+    }
+    const totalAkhir = subtotal - potongan;
+    const orderId = INV- + Math.floor(10000 + Math.random()  90000);
+
+    strukPesananEl.textContent =
+      `Order ID ${orderId}n` +
+      `Nama Pemesan ${namaPemesan}n` +
+      `Produk ${produkAktif.nama}n` +
+      `Jumlah Pesan ${jumlahPesan}n` +
+      `Subtotal Rp ${subtotal.toLocaleString(id-ID)}n` +
+      `Potongan Rp ${potongan.toLocaleString(id-ID)}n` +
+      `Total Akhir Rp ${totalAkhir.toLocaleString(id-ID)}`;
+
+    document.getElementById(formPemesanan).reset();
+    return false;
+  }
+
+  renderDaftarProduk();
+  tampilkanProduk();
+script
+
+body
+html

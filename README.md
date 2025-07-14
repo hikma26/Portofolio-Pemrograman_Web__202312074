@@ -89,7 +89,7 @@ Simulasi toko elektronik, fitur seperti kalkulasi harga otomatis, slideshow gamb
 
 Membuat buku tamu digital dengan validasi server-side, menyimpan data input pengguna secara aman.
 
-### 📃 Modul 6: CRUD Produk Toko Online
+### 📃 Modul 6: CRUD 
 
 Aplikasi CRUD (Create, Read, Update, Delete) produk dengan PHP dan database MySQL. Dilengkapi form input dan koneksi database.
 

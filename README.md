@@ -1,4 +1,4 @@
-# Portofolio Pemrograman Web
+# 📘 Portofolio Pemrograman Web
 
 **Mata Kuliah**: Pemrograman Web
 **NIM**: 202312074
@@ -9,26 +9,26 @@
 
 ## 📋 Deskripsi Project
 
-Repositori ini merupakan kumpulan tugas praktikum dari mata kuliah Pemrograman Web yang dikembangkan dari Modul 1 hingga Modul 6. Tujuannya adalah untuk membangun portofolio digital mahasiswa yang menunjukkan perkembangan keterampilan dalam pengembangan web, mulai dari dasar HTML, CSS, JavaScript, hingga pemrograman backend menggunakan PHP dan MySQL.
+Repositori ini merupakan kumpulan tugas praktikum Pemrograman Web dari Modul 1 hingga Modul 6. Setiap modul menyajikan kemampuan berbeda dalam pengembangan web, mulai dari dasar HTML hingga integrasi database menggunakan PHP & MySQL. Tujuan utama proyek ini adalah membangun portofolio yang mencerminkan progres pemahaman teknologi web modern secara terstruktur.
 
 ---
 
 ## 🛠️ Teknologi yang Digunakan
 
-| Teknologi  | Versi   | Deskripsi                           |
-| ---------- | ------- | ----------------------------------- |
-| HTML5      | Terbaru | Membuat struktur halaman web        |
-| CSS3       | Terbaru | Menata tampilan dan layout web      |
-| JavaScript | ES6+    | Interaktivitas pada halaman         |
-| Bootstrap  | 5.3.3   | Framework responsif untuk desain UI |
-| PHP        | 7.4+    | Bahasa backend untuk logika server  |
-| MySQL      | 8.0+    | Sistem manajemen basis data         |
+| Teknologi  | Versi   | Keterangan Penggunaan                  |
+| ---------- | ------- | -------------------------------------- |
+| HTML5      | Terbaru | Struktur dasar halaman web             |
+| CSS3       | Terbaru | Styling tampilan dan layout            |
+| JavaScript | ES6+    | Logika interaktif dan DOM Manipulation |
+| Bootstrap  | 5.3.3   | Framework responsif berbasis komponen  |
+| PHP        | 7.4+    | Bahasa backend dan server-side logic   |
+| MySQL      | 8.0+    | Pengelolaan database relasional        |
 
 ---
 
 ## 📁 Struktur Project
 
-```
+```plaintext
 Portofolio-Pemrograman-Web-202312074/
 ├── Modul-1/
 │   ├── tugas_modul1.html
@@ -67,252 +67,101 @@ Portofolio-Pemrograman-Web-202312074/
 
 ---
 
-## 🔢 Detail Modul
+## 🔍 Ringkasan Modul
 
-### 📅 Modul 1: HTML Dasar
+### 📄 Modul 1: HTML Dasar
 
-**File**: `Modul-1/tugas_modul1.html`
+Membuat form pendaftaran mahasiswa dengan input lengkap (text, radio, select, dll). Struktur HTML disusun semantik.
 
-Formulir pendaftaran yang mencakup elemen-elemen seperti input teks, radio, checkbox, dan penggunaan atribut form secara lengkap. Dilengkapi juga dengan logo kampus.
+### 🎨 Modul 2: CSS & Responsive Design
 
-### 🖌️ Modul 2: CSS dan Responsive Design
+Menerapkan Grid CSS untuk tampilan layout halaman yang responsif. Desain menyesuaikan ukuran perangkat.
 
-**File**: `Modul-2/tugas_modul2.html`, `tugas_modul2.css`
+### 🧱 Modul 3: Bootstrap Framework
 
-Mendesain layout grid yang responsif menggunakan CSS3, dengan gaya yang konsisten untuk berbagai perangkat (desktop, tablet, mobile).
+Profil perusahaan sederhana menggunakan Bootstrap. Dilengkapi gambar dan layout grid responsif.
 
-### 🚀 Modul 3: Framework Bootstrap
+### ⚙️ Modul 4: JavaScript Interaktif
 
-**File**: `Modul-3/tugas3.html`
+Simulasi toko elektronik, fitur seperti kalkulasi harga otomatis, slideshow gambar produk, dan jam real-time.
 
-Situs profil perusahaan berbasis Bootstrap. Menggunakan card, tabel, dan elemen UI Bootstrap lainnya. Gambar produk ditampilkan dalam folder ini.
+### 📝 Modul 5: PHP Dasar
 
-### ⚡ Modul 4: JavaScript Interaktif
+Membuat buku tamu digital dengan validasi server-side, menyimpan data input pengguna secara aman.
 
-**File**: `Modul-4/tugas.html`
+### 📃 Modul 6: CRUD Produk Toko Online
 
-Membuat toko elektronik sederhana. Fitur seperti kalkulasi total harga, promo, jam real-time, dan slideshow gambar produk dijalankan menggunakan JavaScript.
-
-### 🔧 Modul 5: Dasar PHP
-
-**File**: `Modul-5/tugas.php`
-
-Implementasi buku tamu digital yang dapat menyimpan dan menampilkan data input pengguna dengan validasi server-side sederhana.
-
-### 📂 Modul 6: CRUD dengan PHP & MySQL
-
-**Folder**: `Modul-6/Crud Toko Online/`
-
-Aplikasi CRUD (Create, Read, Update, Delete) untuk mengelola data produk toko online menggunakan database MySQL dan koneksi PHP. Mendukung tambah, edit, hapus, dan tampilan tabel data.
+Aplikasi CRUD (Create, Read, Update, Delete) produk dengan PHP dan database MySQL. Dilengkapi form input dan koneksi database.
 
 ---
 
-## 🚪 Cara Menjalankan Project
+## 🚀 Cara Menjalankan Proyek
 
-1. **Clone Repository**
+1. **Clone Repository**:
+
+   ```bash
+   git clone https://github.com/hikma26/Portofolio-Pemrograman_Web__202312074.git
+   cd Portofolio-Pemrograman_Web__202312074
+   ```
+
+2. **Setup Local Server** (XAMPP):
+
+   * Letakkan folder ke `htdocs`
+   * Jalankan Apache & MySQL
+
+3. **Buat Database untuk Modul 6**:
+
+   ```sql
+   CREATE DATABASE db_toko;
+
+   CREATE TABLE produk (
+     id_produk INT AUTO_INCREMENT PRIMARY KEY,
+     nama_produk VARCHAR(100) NOT NULL,
+     harga DECIMAL(10,2) NOT NULL,
+     stok INT NOT NULL
+   );
+   ```
+
+---
+
+## 🌿 Branch Pengembangan
+
+| Branch          | Modul yang Dicakup                       |
+| --------------- | ---------------------------------------- |
+| tugas/modul-1-3 | Modul 1, 2, dan 3 (HTML, CSS, Bootstrap) |
+| tugas/modul-4   | Modul 4 (JavaScript)                     |
+| tugas/modul-5   | Modul 5 (Buku Tamu PHP)                  |
+| tugas/modul-6   | Modul 6 (CRUD PHP & MySQL)               |
+
+Contoh perintah git:
 
 ```bash
-git clone https://github.com/hikma26/Portofolio-Pemrograman_Web__202312074.git
-```
-
-2. **Buka di XAMPP**
-
-* Tempatkan folder ke dalam `htdocs`
-* Jalankan Apache & MySQL via XAMPP
-
-3. **Import Database** (untuk Modul 6)
-
-```sql
-CREATE DATABASE db_toko;
-USE db_toko;
-
-CREATE TABLE produk (
-  id_produk INT AUTO_INCREMENT PRIMARY KEY,
-  nama_produk VARCHAR(100) NOT NULL,
-  harga DECIMAL(10,2) NOT NULL,
-  stok INT NOT NULL
-);
-```
-
-🔧 Pengelolaan Branch
-Setiap tugas modul dikerjakan pada branch terpisah untuk menjaga keteraturan versi dan mencegah konflik antar modul. Berikut adalah langkah-langkah yang dilakukan pada masing-masing branch tugas:
-
-🌿 1. Branch: tugas/modul-1-3
-📦 Berisi tugas dari Modul 1 , Modul 2, dan Modul 3
 git checkout main
 git pull origin main
-
-
-Clone repositori dari GitHub:
-
-bash
-Copy
-Edit
-git clone https://github.com/hikma26/Portofolio-Pemrograman_Web__202312074.git
-cd Portofolio-Pemrograman_Web__202312074
-Pindah ke branch main dan tarik update:
-
-bash
-Copy
-Edit
-git checkout main
-git pull origin main
-Buat branch baru:
-
-bash
-Copy
-Edit
 git checkout -b tugas/modul-1-3
-Tambahkan folder dan file dari Modul 1 hingga 3 ke struktur repositori.
-
-Commit perubahan:
-
-bash
-Copy
-Edit
 git add .
-git commit -m "Menambahkan tugas Modul 1–3: HTML, CSS, Bootstrap"
-Push branch ke GitHub:
-
-bash
-Copy
-Edit
+git commit -m "Menambahkan Modul 1–3"
 git push origin tugas/modul-1-3
-🌿 2. Branch: tugas/modul-4
-📦 Berisi tugas JavaScript Interaktif (Modul 4)
-
-Pastikan berada di main dan sinkron:
-
-bash
-Copy
-Edit
-git checkout main
-git pull origin main
-Buat branch khusus:
-
-bash
-Copy
-Edit
-git checkout -b tugas/modul-4
-Tambahkan folder Modul-4/ berisi tugas JavaScript (misalnya toko elektronik interaktif).
-
-Simpan perubahan:
-
-bash
-Copy
-Edit
-git add .
-git commit -m "Menambahkan tugas Modul 4 - JavaScript"
-Push ke GitHub:
-
-bash
-Copy
-Edit
-git push origin tugas/modul-4
-🌿 3. Branch: tugas/modul-5
-📦 Berisi tugas PHP dasar berupa buku tamu (Modul 5)
-
-Kembali ke main dan tarik pembaruan:
-
-bash
-Copy
-Edit
-git checkout main
-git pull origin main
-Buat branch:
-
-bash
-Copy
-Edit
-git checkout -b tugas/modul-5
-Tambahkan folder Modul-5/ berisi file PHP untuk buku tamu digital.
-
-Commit perubahan:
-
-bash
-Copy
-Edit
-git add .
-git commit -m "Menambahkan tugas Modul 5 - Buku Tamu PHP"
-Push ke GitHub:
-
-bash
-Copy
-Edit
-git push origin tugas/modul-5
-🌿 4. Branch: tugas/modul-6
-📦 Berisi CRUD Toko Online (PHP & MySQL – Modul 6)
-
-Masuk ke branch utama:
-
-bash
-Copy
-Edit
-git checkout main
-git pull origin main
-Buat branch baru:
-
-bash
-Copy
-Edit
-git checkout -b tugas/modul-6
-Tambahkan folder Modul-6/Crud Toko Online/ beserta semua file PHP CRUD.
-
-Commit:
-
-bash
-Copy
-Edit
-git add .
-git commit -m "Menambahkan tugas Modul 6 - CRUD Toko Online"
-Push ke GitHub:
-
-bash
-Copy
-Edit
-git push origin tugas/modul-6
-Dengan mengikuti langkah-langkah ini, setiap modul dapat dipisahkan dalam branch masing-masing, menjaga keteraturan versi, dan memudahkan penilaian per bagian. Struktur seperti ini juga menunjukkan pemahaman praktik Git secara nyata dan sistematis.
----
+```
 
 ---
 
-## 🔗 Link Modul dan Video
+## 🔗 Link Repository & Video Per Modul
 
-### Modul 1
-
-* Repository: [https://github.com/hikma26/Tugas-Modul-1-Praktikum-Pemrograman-Web.git](https://github.com/hikma26/Tugas-Modul-1-Praktikum-Pemrograman-Web.git)
-* Video: [https://youtu.be/-NnTQF4CWHQ](https://youtu.be/-NnTQF4CWHQ)
-
-### Modul 2
-
-* Repository: [https://github.com/hikma26/tugas-modul-2-pemrograman-web.git](https://github.com/hikma26/tugas-modul-2-pemrograman-web.git)
-* Video: [https://youtu.be/mfV1TGTCtZE?si=VxjW6DvTm80AYmoF](https://youtu.be/mfV1TGTCtZE?si=VxjW6DvTm80AYmoF)
-
-### Modul 3
-
-* Repository: [https://github.com/hikma26/Tugas-modul-3.git](https://github.com/hikma26/Tugas-modul-3.git)
-* Video: [https://youtu.be/OrmCHsjEaa8](https://youtu.be/OrmCHsjEaa8)
-
-### Modul 4
-
-* Repository: [https://github.com/hikma26/tugasmodul4.git](https://github.com/hikma26/tugasmodul4.git)
-* Video: [https://youtu.be/fO2z0llPxk4](https://youtu.be/fO2z0llPxk4)
-
-### Modul 5
-
-* Repository: *menyusul*
-* Video: *menyusul*
-
-### Modul 6
-
-* Repository: [https://github.com/hikma26/tugas\_modul6.git](https://github.com/hikma26/tugas_modul6.git)
-* Video: [https://youtu.be/fhhvjxIFiaE](https://youtu.be/fhhvjxIFiaE)
+| Modul   | Repository                                                                                                                                       | Video                                                                                                |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| Modul 1 | [https://github.com/hikma26/Tugas-Modul-1-Praktikum-Pemrograman-Web.git](https://github.com/hikma26/Tugas-Modul-1-Praktikum-Pemrograman-Web.git) | [https://youtu.be/-NnTQF4CWHQ](https://youtu.be/-NnTQF4CWHQ)                                         |
+| Modul 2 | [https://github.com/hikma26/tugas-modul-2-pemrograman-web.git](https://github.com/hikma26/tugas-modul-2-pemrograman-web.git)                     | [https://youtu.be/mfV1TGTCtZE?si=VxjW6DvTm80AYmoF](https://youtu.be/mfV1TGTCtZE?si=VxjW6DvTm80AYmoF) |
+| Modul 3 | [https://github.com/hikma26/Tugas-modul-3.git](https://github.com/hikma26/Tugas-modul-3.git)                                                     | [https://youtu.be/OrmCHsjEaa8](https://youtu.be/OrmCHsjEaa8)                                         |
+| Modul 4 | [https://github.com/hikma26/tugasmodul4.git](https://github.com/hikma26/tugasmodul4.git)                                                         | [https://youtu.be/fO2z0llPxk4](https://youtu.be/fO2z0llPxk4)                                         |
+| Modul 5 | *Menyusul*                                                                                                                                       | *Menyusul*                                                                                           |
+| Modul 6 | [https://github.com/hikma26/tugas\_modul6.git](https://github.com/hikma26/tugas_modul6.git)                                                      | [https://youtu.be/fhhvjxIFiaE](https://youtu.be/fhhvjxIFiaE)                                         |
 
 ---
 
-## 🛍️ Akses URL Lokal
+## 🌐 Akses Lokal
 
-| Modul   | URL                                                                                                                                                                      |
+| Modul   | URL Lokal                                                                                                                                                                |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Modul 1 | [http://localhost/Portofolio-Pemrograman\_Web\_\_202312074/Modul-1/tugas\_modul1.html](http://localhost/Portofolio-Pemrograman_Web__202312074/Modul-1/tugas_modul1.html) |
 | Modul 2 | [http://localhost/Portofolio-Pemrograman\_Web\_\_202312074/Modul-2/tugas\_modul2.html](http://localhost/Portofolio-Pemrograman_Web__202312074/Modul-2/tugas_modul2.html) |
@@ -323,6 +172,21 @@ Dengan mengikuti langkah-langkah ini, setiap modul dapat dipisahkan dalam branch
 
 ---
 
-## 📑 Lisensi
+## 🔐 Keamanan & Validasi
 
-Proyek ini dibuat untuk keperluan pembelajaran dan dokumentasi tugas akhir mata kuliah Pemrograman Web STITEK Bontang oleh Nur Hikma (202312074).
+* ✅ Validasi Input (Client & Server Side)
+* ✅ Proteksi XSS (`htmlspecialchars()`)
+* ⚠️ Peningkatan: SQL Injection → gunakan prepared statements
+* 🛡️ (Opsional) CSRF token untuk proteksi form
+
+---
+
+## ✨ Catatan Akhir
+
+Struktur repository dan branch telah dibuat dengan memperhatikan keteraturan versi, kolaborasi, dan penilaian per modul. Ini menunjukkan penguasaan praktik Git dan dokumentasi proyek secara profesional.
+
+---
+
+## 📄 Lisensi
+
+Proyek ini disusun untuk dokumentasi akademik mata kuliah Pemrograman Web oleh **Nur Hikma (202312074)** di **STITEK Bontang**.

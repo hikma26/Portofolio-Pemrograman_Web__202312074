@@ -138,7 +138,10 @@ CREATE TABLE produk (
 Setiap tugas modul dikerjakan pada branch terpisah untuk menjaga keteraturan versi dan mencegah konflik antar modul. Berikut adalah langkah-langkah yang dilakukan pada masing-masing branch tugas:
 
 🌿 1. Branch: tugas/modul-1-3
-📦 Berisi tugas dari Modul 1 (HTML), Modul 2 (CSS), dan Modul 3 (Bootstrap)
+📦 Berisi tugas dari Modul 1 , Modul 2, dan Modul 3
+git checkout main
+git pull origin main
+
 
 Clone repositori dari GitHub:
 

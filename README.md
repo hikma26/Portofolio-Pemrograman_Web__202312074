@@ -152,9 +152,9 @@ Setiap tugas praktikum dikelola dalam branch terpisah untuk menjaga kerapian ver
 
 ---
 
-### 🌿 Branch yang Digunakan:
+🌿 Branch yang Digunakan:
 
-#### 1. `tugas/modul-1-3`
+1. `tugas/modul-1-3`
 
 Digunakan untuk menyimpan tugas dari Modul 1 sampai Modul 3.
 Langkah:
@@ -166,7 +166,7 @@ git commit -m "Menambahkan tugas Modul 1-3"
 git push origin tugas/modul-1-3
 ```
 
-#### 2. `tugas/modul-4`
+2. `tugas/modul-4`
 
 Digunakan untuk tugas Modul 4 (JavaScript Dasar).
 Langkah:
@@ -180,7 +180,7 @@ git commit -m "Menambahkan tugas Modul 4 - JavaScript"
 git push origin tugas/modul-4
 ```
 
-#### 3. `tugas/modul-5`
+3. `tugas/modul-5`
 
 Digunakan untuk tugas Modul 5 (Form & Validasi).
 Langkah:
@@ -194,7 +194,7 @@ git commit -m "Menambahkan tugas Modul 5 - Form & Validasi"
 git push origin tugas/modul-5
 ```
 
-#### 4. `tugas/modul-6`
+4. `tugas/modul-6`
 
 Digunakan untuk tugas Modul 6 (Bootstrap).
 Langkah:

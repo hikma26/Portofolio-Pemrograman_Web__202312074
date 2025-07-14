@@ -134,22 +134,141 @@ CREATE TABLE produk (
 );
 ```
 
-## 🔧 Pengelolaan Branch
+🔧 Pengelolaan Branch
+Setiap tugas modul dikerjakan pada branch terpisah untuk menjaga keteraturan versi dan mencegah konflik antar modul. Berikut adalah langkah-langkah yang dilakukan pada masing-masing branch tugas:
 
-Setiap tugas praktikum dikelola dalam branch terpisah untuk menjaga kerapian versi, menghindari konflik antar modul, dan memudahkan pelacakan perubahan. Berikut alur pengelolaan yang saya terapkan berdasarkan modul:
+🌿 1. Branch: tugas/modul-1-3
+📦 Berisi tugas dari Modul 1 (HTML), Modul 2 (CSS), dan Modul 3 (Bootstrap)
 
-### 📍 Langkah-langkah Umum
+Clone repositori dari GitHub:
 
-1. **Clone repositori ke komputer lokal:**
-   ```bash
-   git clone https://github.com/hikma26/Portofolio-Pemrograman_Web__202312074.git
-````
+bash
+Copy
+Edit
+git clone https://github.com/hikma26/Portofolio-Pemrograman_Web__202312074.git
+cd Portofolio-Pemrograman_Web__202312074
+Pindah ke branch main dan tarik update:
 
-2. **Buat struktur folder untuk setiap modul.**
-   Contoh: `Modul-1_HTML-Dasar`, `Modul-2_CSS-Dasar`, `Modul-3_Layout-Responsive`, dan seterusnya.
+bash
+Copy
+Edit
+git checkout main
+git pull origin main
+Buat branch baru:
 
-3. **Pastikan setiap tugas dikerjakan di branch terpisah.**
+bash
+Copy
+Edit
+git checkout -b tugas/modul-1-3
+Tambahkan folder dan file dari Modul 1 hingga 3 ke struktur repositori.
 
+Commit perubahan:
+
+bash
+Copy
+Edit
+git add .
+git commit -m "Menambahkan tugas Modul 1–3: HTML, CSS, Bootstrap"
+Push branch ke GitHub:
+
+bash
+Copy
+Edit
+git push origin tugas/modul-1-3
+🌿 2. Branch: tugas/modul-4
+📦 Berisi tugas JavaScript Interaktif (Modul 4)
+
+Pastikan berada di main dan sinkron:
+
+bash
+Copy
+Edit
+git checkout main
+git pull origin main
+Buat branch khusus:
+
+bash
+Copy
+Edit
+git checkout -b tugas/modul-4
+Tambahkan folder Modul-4/ berisi tugas JavaScript (misalnya toko elektronik interaktif).
+
+Simpan perubahan:
+
+bash
+Copy
+Edit
+git add .
+git commit -m "Menambahkan tugas Modul 4 - JavaScript"
+Push ke GitHub:
+
+bash
+Copy
+Edit
+git push origin tugas/modul-4
+🌿 3. Branch: tugas/modul-5
+📦 Berisi tugas PHP dasar berupa buku tamu (Modul 5)
+
+Kembali ke main dan tarik pembaruan:
+
+bash
+Copy
+Edit
+git checkout main
+git pull origin main
+Buat branch:
+
+bash
+Copy
+Edit
+git checkout -b tugas/modul-5
+Tambahkan folder Modul-5/ berisi file PHP untuk buku tamu digital.
+
+Commit perubahan:
+
+bash
+Copy
+Edit
+git add .
+git commit -m "Menambahkan tugas Modul 5 - Buku Tamu PHP"
+Push ke GitHub:
+
+bash
+Copy
+Edit
+git push origin tugas/modul-5
+🌿 4. Branch: tugas/modul-6
+📦 Berisi CRUD Toko Online (PHP & MySQL – Modul 6)
+
+Masuk ke branch utama:
+
+bash
+Copy
+Edit
+git checkout main
+git pull origin main
+Buat branch baru:
+
+bash
+Copy
+Edit
+git checkout -b tugas/modul-6
+Tambahkan folder Modul-6/Crud Toko Online/ beserta semua file PHP CRUD.
+
+Commit:
+
+bash
+Copy
+Edit
+git add .
+git commit -m "Menambahkan tugas Modul 6 - CRUD Toko Online"
+Push ke GitHub:
+
+bash
+Copy
+Edit
+git push origin tugas/modul-6
+Dengan mengikuti langkah-langkah ini, setiap modul dapat dipisahkan dalam branch masing-masing, menjaga keteraturan versi, dan memudahkan penilaian per bagian. Struktur seperti ini juga menunjukkan pemahaman praktik Git secara nyata dan sistematis.
 ---
 
 ---

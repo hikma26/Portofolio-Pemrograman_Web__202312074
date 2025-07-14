@@ -134,6 +134,84 @@ CREATE TABLE produk (
 );
 ```
 
+## 🔧 Pengelolaan Branch
+
+Setiap tugas praktikum dikelola dalam branch terpisah untuk menjaga kerapian versi, menghindari konflik antar modul, dan memudahkan pelacakan perubahan. Berikut alur pengelolaan yang saya terapkan berdasarkan modul:
+
+### 📍 Langkah-langkah Umum
+
+1. **Clone repositori ke komputer lokal:**
+   ```bash
+   git clone https://github.com/hikma26/Portofolio-Pemrograman_Web__202312074.git
+````
+
+2. **Buat struktur folder untuk setiap modul.**
+   Contoh: `Modul-1_HTML-Dasar`, `Modul-2_CSS-Dasar`, `Modul-3_Layout-Responsive`, dan seterusnya.
+
+3. **Pastikan setiap tugas dikerjakan di branch terpisah.**
+
+---
+
+### 🌿 Branch yang Digunakan:
+
+#### 1. `tugas/modul-1-3`
+
+Digunakan untuk menyimpan tugas dari Modul 1 sampai Modul 3.
+Langkah:
+
+```bash
+git checkout -b tugas/modul-1-3
+git add .
+git commit -m "Menambahkan tugas Modul 1-3"
+git push origin tugas/modul-1-3
+```
+
+#### 2. `tugas/modul-4`
+
+Digunakan untuk tugas Modul 4 (JavaScript Dasar).
+Langkah:
+
+```bash
+git checkout main
+git pull origin main
+git checkout -b tugas/modul-4
+git add .
+git commit -m "Menambahkan tugas Modul 4 - JavaScript"
+git push origin tugas/modul-4
+```
+
+#### 3. `tugas/modul-5`
+
+Digunakan untuk tugas Modul 5 (Form & Validasi).
+Langkah:
+
+```bash
+git checkout main
+git pull origin main
+git checkout -b tugas/modul-5
+git add .
+git commit -m "Menambahkan tugas Modul 5 - Form & Validasi"
+git push origin tugas/modul-5
+```
+
+#### 4. `tugas/modul-6`
+
+Digunakan untuk tugas Modul 6 (Bootstrap).
+Langkah:
+
+```bash
+git checkout main
+git pull origin main
+git checkout -b tugas/modul-6
+git add .
+git commit -m "Menambahkan tugas Modul 6 - Bootstrap"
+git push origin tugas/modul-6
+```
+
+---
+
+Dengan struktur branch ini, seluruh hasil kerja praktikum dikelola dengan sistematis dan terpisah berdasarkan modul. Setiap perubahan terdokumentasi dengan baik, dan repositori tetap bersih, mudah dibaca, serta profesional.
+ 
 ---
 
 ## 🔗 Link Modul dan Video
